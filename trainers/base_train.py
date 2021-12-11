@@ -17,7 +17,7 @@ from utils.utils import get_img
 import tensorflow as tf
 
 STYLE_LAYERS = ('relu1_1', 'relu2_1', 'relu3_1', 'relu4_1', 'relu5_1')
-CONTENT_LAYER = 'relu5_2' #'relu4_2'
+CONTENT_LAYER = 'relu4_2'
 DEVICES = 'CUDA_VISIBLE_DEVICES'
 
 class Trainer:
