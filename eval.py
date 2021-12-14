@@ -7,7 +7,7 @@ Author：Team Li
 
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
-from utils.config import build_parser
+from utils.config import get_eval_config
 from utils.logger import logger
 from utils.utils import exists,list_files
 from trainers.base_evaluate import Evaluater
@@ -20,7 +20,7 @@ def check_opts(opts):
         assert opts.batch_size > 0
 
 def main():
-    parser = build_parser()
+    parser = get_eval_config()
     opts = parser.parse_args()
     check_opts(opts)
 

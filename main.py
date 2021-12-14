@@ -8,7 +8,7 @@ Author：Team Li
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 from trainers.base_train import Trainer
-from utils.config import get_args
+from utils.config import get_train_config
 from utils.logger import LoggerRecord
 from utils.utils import *
 from trainers.base_evaluate import Evaluater
@@ -17,7 +17,7 @@ def main():
     # capture the config path from the run arguments
     # then process the json configuration file
     try:
-        parser = get_args()
+        parser = get_train_config()
         options = parser.parse_args()
         check_opts(options)
     except:

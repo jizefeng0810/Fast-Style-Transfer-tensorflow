@@ -21,7 +21,7 @@ BATCH_SIZE = 4
 DEVICE = '/gpu:0'
 FRAC_GPU = 1
 
-def get_args():
+def get_train_config():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--checkpoint-dir', type=str,
                         dest='checkpoint_dir', help='dir to save checkpoint in',
@@ -87,7 +87,7 @@ def get_args():
 
     return parser
 
-def build_parser():
+def get_eval_config():
     parser = argparse.ArgumentParser()
     parser.add_argument('--checkpoint', type=str,
                         dest='checkpoint_dir',
